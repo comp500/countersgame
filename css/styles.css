@@ -1,0 +1,8 @@
+input {
+	width: 4em !important;
+}
+
+.progress-bar.notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}

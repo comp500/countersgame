@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Counters Game Solver</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<script src="js/index.js"></script>
+
+		<div class="container">
+			<h1 class="display-3">Counters Game Solver</h1>
+			<form>
+				<div class="form-row">
+					<div class="col-auto">
+						<label>12: <span id="11-res"></span></label>
+						<input type="number" id="11" value="4" tabindex="12" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>11: <span id="10-res"></span></label>
+						<input type="number" id="10" value="4" tabindex="11" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>10: <span id="9-res"></span></label>
+						<input type="number" id="9" value="4" tabindex="10" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>9: <span id="8-res"></span></label>
+						<input type="number" id="8" value="4" tabindex="9" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>8: <span id="7-res"></span></label>
+						<input type="number" id="7" value="4" tabindex="8" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>7: <span id="6-res"></span></label>
+						<input type="number" id="6" value="4" tabindex="7" class="form-control form-control-sm" min="0">
+					</div>
+
+					<label class="col-auto col-form-label ml-auto">Search tree depth:</label>
+					<div class="col-auto">
+						<input type="number" id="depth" value="2" tabindex="13" class="form-control" min="0">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="col-auto">
+						<label>1: <span id="0-res"></span></label>
+						<input type="number" id="0" value="4" tabindex="1" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>2: <span id="1-res"></span></label>
+						<input type="number" id="1" value="4" tabindex="2" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>3: <span id="2-res"></span></label>
+						<input type="number" id="2" value="4" tabindex="3" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>4: <span id="3-res"></span></label>
+						<input type="number" id="3" value="4" tabindex="4" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>5: <span id="4-res"></span></label>
+						<input type="number" id="4" value="4" tabindex="5" class="form-control form-control-sm" min="0">
+					</div>
+					<div class="col-auto">
+						<label>6: <span id="5-res"></span></label>
+						<input type="number" id="5" value="4" tabindex="6" class="form-control form-control-sm" min="0">
+					</div>
+
+					<label class="col-auto col-form-label ml-auto">My territories (round/gained):</label>
+					<div class="col-auto">
+						<input type="number" id="myTerr" value="6" tabindex="14" class="form-control" min="1" max="11">
+					</div>
+					<div class="col-auto">
+						<input type="number" id="myTerrCurrent" value="0" tabindex="15" class="form-control" min="0" max="11">
+					</div>
+				</div>
+				<div class="form-row">
+					<label class="col-auto col-form-label ml-auto">Opposition territories (round/gained):</label>
+					<div class="col-auto">
+						<input type="number" id="oppTerr" value="6" tabindex="16" class="form-control" min="1" max="11">
+					</div>
+					<div class="col-auto">
+						<input type="number" id="oppTerrCurrent" value="0" tabindex="17" class="form-control" min="0" max="11">
+					</div>
+				</div>
+				<div class="form-row mt-2">
+					<div class="col-auto">
+						<a id="runbutton" class="btn btn-primary col-auto" onclick="start()" href="#">Run</a>
+					</div>
+					<label class="col-auto col-form-label ml-auto">Position number:</label>
+					<div class="col-auto">
+						<input type="number" id="posNum" value="1" tabindex="18" class="form-control" min="1" max="12">
+					</div>
+					<div class="col-auto">
+						<a class="btn btn-primary col-auto" onclick="clickMove()" href="#">Process turn</a>
+					</div>
+					<div class="col-auto">
+						<a class="btn btn-primary col-auto" onclick="clickOppMove()" href="#">Process opposition turn</a>
+					</div>
+				</div>
+			</form>
+
+			<div class="progress my-2">
+				<div class="progress-bar" id="progressbar" role="progressbar" style="width: 0; height: 5px"></div>
+			</div>
+
+			<h5>Output:</h5>
+			<pre id="output">Idle</pre>
+
+			<h5>Log:</h5>
+			<pre id="log" style="max-height: 100px; overflow-y: scroll;"></pre>
+		</div>
+	</body>
+</html>
