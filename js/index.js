@@ -287,3 +287,22 @@ function clickMove() {
 function clickOppMove() {
 	runMove(false);
 }
+
+function clickNewRound() {
+	clear();
+	var myTerrCurrent = document.getElementById("myTerrCurrent");
+	var oppTerrCurrent = document.getElementById("oppTerrCurrent");
+	var total = parseInt(myTerrCurrent.value) + parseInt(oppTerrCurrent.value);
+	if (total == 12) {
+		document.getElementById("myTerr").value = myTerrCurrent.value;
+		document.getElementById("oppTerr").value = oppTerrCurrent.value;
+		myTerrCurrent.value = 0;
+		oppTerrCurrent.value = 0;
+		for (var k = 0; k < 12; k++) {
+			document.getElementById(k).value = 4;
+		}
+		log("New round started.");
+	} else {
+		log("Total is not equal to 12, stopping.");
+	}
+}
