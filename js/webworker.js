@@ -1,12 +1,3 @@
-/*
-TODO:
-weight wins by depth DONE
-input territories in gui DONE
-turn processor DONE
-check territory array stuff
-new round button
-*/
-
 function processMove(state, moveNum, mine) {
     if (state.board[moveNum].value == 0) {
         return false;
