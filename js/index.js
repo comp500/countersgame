@@ -54,7 +54,7 @@ function createState(myTerr, oppTerr) {
 		oppTerr: 0,
 		lastTerr: false
 	};
-	for (var i = 5; i >= 0; i--) {
+	for (var i = 0; i <= 5; i++) {
 		if (myTerr > 0) {
 			state.board[i] = {value: 4, mine: true};
 		} else {
